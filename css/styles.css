@@ -1,0 +1,480 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Libre Baskerville", serif;
+  background-color: white;
+}
+
+.contenedor {
+  width: 90rem;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 50vh;
+  background-image: url(../img/alianza.jfif);
+  background-position: 50% 60%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .first-bg {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 30rem;
+  margin: 0 auto;
+  border-radius: 0.2rem;
+  box-shadow: 0.2rem 0.2rem 0.6rem white, -0.2rem -0.2rem 0.6rem white, -0.2rem 0.2rem 0.8rem #ccc, 0.2rem -0.2rem 0.8rem #ccc;
+}
+.hero .first-bg h1 {
+  font-family: "Libre Baskerville", serif;
+  color: #870438;
+  font-weight: 400;
+  font-size: 30pt;
+  text-align: center;
+  width: 30rem;
+  margin: 0 auto;
+}
+.hero .social {
+  width: 30rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5rem;
+}
+.hero .social a > i {
+  margin: 1rem;
+  text-decoration: none;
+  color: #870438;
+  font-size: 35pt;
+  transition: all 0.3s ease-in-out;
+}
+.hero .social a > i:hover {
+  color: #640229;
+  transform: scale(1.2);
+}
+
+.navegacion {
+  background-color: #870438;
+}
+.navegacion > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.navegacion > ul li {
+  border-left: solid 0.2rem #B59205;
+}
+.navegacion > ul li > a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 4rem;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.navegacion > ul li > a:hover {
+  background-color: #640229;
+}
+.navegacion > ul li:last-of-type {
+  border-right: solid 0.2rem #B59205;
+}
+
+@media (max-width: 610px) {
+  .navegacion > ul li > a {
+    font-size: 11pt;
+  }
+}
+@media (max-width: 558px) {
+  .navegacion > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navegacion > ul li {
+    width: 100%;
+    border-left: none;
+    border-bottom: solid 0.2rem #B59205;
+  }
+  .navegacion > ul li > a {
+    text-align: center;
+  }
+  .navegacion > ul li:last-of-type {
+    border-right: none;
+    border-bottom: none;
+  }
+}
+.banner {
+  width: 100rem;
+  margin: 0 auto;
+  margin-top: 6rem;
+  background-image: url(../img/alianza3.jfif);
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.banner > p {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30pt;
+  text-shadow: 0.2rem 0.2rem 0.6rem black, -0.2rem -0.2rem 0.6rem #ccc, -0.2rem 0.2rem 0.8rem #B59205, 0.2rem -0.2rem 0.8rem #B59205;
+  animation: letreroBanner 10s linear;
+}
+
+@keyframes letreroBanner {
+  0% {
+    transform: translateX(120%);
+    font-size: 50pt;
+  }
+  50% {
+    transform: translateX(-140%);
+    font-size: 50pt;
+  }
+  60% {
+    font-size: 30pt;
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 1050px) {
+  .banner {
+    width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  .banner p {
+    font-size: 20pt;
+  }
+
+  @keyframes letreroBanner {
+    0% {
+      transform: translateX(120%);
+      font-size: 30pt;
+    }
+    50% {
+      transform: translateX(-140%);
+      font-size: 30pt;
+    }
+    60% {
+      font-size: 20pt;
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+@media (max-width: 455px) {
+  .banner {
+    margin-bottom: 6rem;
+  }
+  .banner p {
+    font-size: 12pt;
+  }
+
+  @keyframes letreroBanner {
+    0% {
+      transform: translateX(120%);
+      font-size: 25pt;
+    }
+    50% {
+      transform: translateX(-140%);
+      font-size: 25pt;
+    }
+    60% {
+      font-size: 12pt;
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+.seccion-carta > h2 {
+  text-align: center;
+  margin: 6rem 0rem 2rem 0rem;
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+.cartas {
+  display: flex;
+  font-size: 12pt;
+}
+.cartas .carta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: solid 0.1rem #870438;
+  margin: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+.cartas .carta > h2 {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+.cartas .carta > div i {
+  margin-top: 3rem;
+  font-size: 70pt;
+}
+.cartas .carta > p {
+  margin: 4rem;
+}
+.cartas .carta:hover {
+  color: #870438;
+  transform: scale(1.1);
+  box-shadow: -0.2rem 0.2rem 0.8rem gray, 0.2rem -0.2rem 0.8rem gray;
+}
+
+@media (max-width: 725px) {
+  .cartas .carta > div i {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .cartas .carta p {
+    display: none;
+  }
+}
+.boton {
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #870438;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.boton:hover {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .boton {
+    width: 90%;
+  }
+}
+.boton:hover {
+  box-shadow: -0.2rem 0.2rem 0.8rem #B59205, 0.2rem -0.2rem 0.8rem #B59205;
+}
+
+@media (max-width: 900px) {
+  .contenedor {
+    width: 90%;
+  }
+
+  .cartas {
+    font-size: 10pt;
+  }
+}
+@media (max-width: 558px) {
+  .cartas .carta {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 455px) {
+  .seccion-carta {
+    display: none;
+  }
+}
+.footer {
+  background-color: #870438;
+  color: #FFFFFF;
+}
+.footer .flex {
+  display: flex;
+  justify-content: space-around;
+}
+.footer .ubicacion-footer h4 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 15pt;
+}
+.footer .ubicacion-footer iframe {
+  border-radius: 0.5rem;
+  width: 30rem;
+  height: 30rem;
+}
+.footer .social-footer h4 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 15pt;
+}
+.footer .social-footer a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin: 1rem;
+  font-size: 20pt;
+}
+.footer .copyright {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@media (max-width: 540px) {
+  .footer .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer h4 {
+    text-decoration: underline;
+  }
+}
+.anuncio-oro {
+  height: 40vh;
+  background-image: url(../img/gold.jfif);
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+.anuncio-oro h2 {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 30pt;
+  text-shadow: 0.2rem 0.2rem 0.6rem black, -0.2rem -0.2rem 0.6rem #ccc, -0.2rem 0.2rem 0.8rem #B59205, 0.2rem -0.2rem 0.8rem #B59205;
+  animation: anuncio1 3s linear;
+}
+@keyframes anuncio1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.anuncio-oro p {
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0.2rem 0.2rem 0.6rem black, -0.2rem -0.2rem 0.6rem #ccc, -0.2rem 0.2rem 0.8rem #B59205, 0.2rem -0.2rem 0.8rem #B59205;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 1320px) {
+  .anuncio-oro h2 {
+    font-size: 25pt;
+  }
+}
+@media (max-width: 1100px) {
+  .anuncio-oro h2 {
+    font-size: 20pt;
+  }
+}
+@media (max-width: 890px) {
+  .anuncio-oro h2 {
+    font-size: 15pt;
+  }
+}
+@media (max-width: 670px) {
+  .anuncio-oro h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 610px) {
+  .anuncio-oro {
+    margin-top: 4rem;
+  }
+}
+.contenedor2 {
+  width: 110rem;
+  margin: 0 auto;
+}
+.contenedor2 > h2 {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 11pt;
+  justify-content: space-between;
+}
+.productos .imagen-producto img {
+  width: 100%;
+  height: 30rem;
+}
+.productos .producto {
+  flex-basis: calc(30%);
+  margin: 1rem 0rem 4rem 0rem;
+  border: solid 0.1rem #870438;
+}
+.productos .descripcion-producto {
+  line-height: 2.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.productos .descripcion-producto > h2 {
+  line-height: 3.2rem;
+}
+.productos .descripcion-producto .precio {
+  padding: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .contenedor2 {
+    width: 90%;
+  }
+}
+@media (max-width: 880px) {
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media (max-width: 455px) {
+  .productos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .productos .producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .productos .producto .boton {
+    width: 100%;
+  }
+}
+.ver-mas {
+  display: flex;
+  justify-content: center;
+}
+.ver-mas a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 20rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

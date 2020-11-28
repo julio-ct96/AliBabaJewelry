@@ -1,0 +1,51 @@
+.hero {
+    height: 50vh;
+    background-image: url(../img/alianza.jfif);
+    background-position: 50% 60%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .first-bg {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 30rem;
+        margin: 0 auto;
+        border-radius: .2rem;
+        box-shadow: .2rem .2rem .6rem white,
+            -.2rem -.2rem .6rem white,
+            -.2rem .2rem .8rem #ccc,
+            .2rem -.2rem .8rem #ccc;
+
+        h1 {
+            font-family: $fuente-titulo;
+            color: $color-principal;
+            font-weight: 400;
+            font-size: 30pt;
+            text-align: center;
+            width: 30rem;
+            margin: 0 auto;
+        }
+    }
+
+    .social {
+        width: 30rem;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 5rem;
+
+        a>i {
+            margin: 1rem;
+            text-decoration: none;
+            color: $color-principal;
+            font-size: 35pt;
+            transition: all .3s ease-in-out;
+        }
+
+        a>i:hover {
+            color: #640229;
+            transform: scale(1.2);
+        }
+    }
+}

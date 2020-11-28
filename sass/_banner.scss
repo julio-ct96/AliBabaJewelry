@@ -1,0 +1,110 @@
+.banner {
+    width: 100rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+    background-image: url(../img/alianza3.jfif);
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+    border-radius: .4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    >p {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 30pt;
+        text-shadow: .2rem .2rem .6rem black,
+            -.2rem -.2rem .6rem #ccc,
+            -.2rem .2rem .8rem $color-dorado,
+            .2rem -.2rem .8rem $color-dorado;
+        animation: letreroBanner 10s linear;
+    }
+}
+
+@keyframes letreroBanner {
+    0% {
+        transform: translateX(120%);
+        font-size: 50pt;
+    }
+
+    50% {
+        transform: translateX(-140%);
+        font-size: 50pt;
+    }
+
+    60% {
+        font-size: 30pt;
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 1050px) {
+    .banner {
+        width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .banner {
+        p {
+            font-size: 20pt;
+        }
+    }
+
+    @keyframes letreroBanner {
+        0% {
+            transform: translateX(120%);
+            font-size: 30pt;
+        }
+
+        50% {
+            transform: translateX(-140%);
+            font-size: 30pt;
+        }
+
+        60% {
+            font-size: 20pt;
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+}
+
+@media (max-width: 455px) {
+    .banner {
+        margin-bottom: 6rem;
+
+        p {
+            font-size: 12pt;
+        }
+    }
+
+    @keyframes letreroBanner {
+        0% {
+            transform: translateX(120%);
+            font-size: 25pt;
+        }
+
+        50% {
+            transform: translateX(-140%);
+            font-size: 25pt;
+        }
+
+        60% {
+            font-size: 12pt;
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+}

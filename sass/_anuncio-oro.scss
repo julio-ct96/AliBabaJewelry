@@ -1,0 +1,82 @@
+.anuncio-oro {
+    height: 40vh;
+    background-image: url(../img/gold.jfif);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+
+    h2 {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-size: 30pt;
+        text-shadow: .2rem .2rem .6rem black,
+            -.2rem -.2rem .6rem #ccc,
+            -.2rem .2rem .8rem $color-dorado,
+            .2rem -.2rem .8rem $color-dorado;
+        animation: anuncio1 3s linear;
+    }
+
+    @keyframes anuncio1 {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    p {
+        color: #FFFFFF;
+        text-align: center;
+        text-shadow: .2rem .2rem .6rem black,
+            -.2rem -.2rem .6rem #ccc,
+            -.2rem .2rem .8rem $color-dorado,
+            .2rem -.2rem .8rem $color-dorado;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+    }
+}
+
+@media (max-width: 1320px) {
+    .anuncio-oro {
+        h2 {
+            font-size: 25pt;
+        }
+    }
+}
+
+@media(max-width: 1100px) {
+    .anuncio-oro {
+        h2 {
+            font-size: 20pt;
+        }
+    }
+}
+
+@media(max-width: 890px) {
+    .anuncio-oro {
+        h2 {
+            font-size: 15pt;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .anuncio-oro{
+        h2{
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width:610px){
+    .anuncio-oro{
+        margin-top: 4rem;
+    }
+}

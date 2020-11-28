@@ -1,0 +1,33 @@
+@import "variables";
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: $fuente-titulo;
+    background-color: white;
+}
+
+.contenedor {
+    width: 90rem;
+    margin: 0 auto;
+}
+
+
+
+@import "header";
+@import "nav";
+@import "banner";
+@import "cartas";
+@import "footer";
+@import "anuncio-oro";
+@import "productos";
